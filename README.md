@@ -35,7 +35,7 @@ import numpy as np
 from PIL import Image
 from matplotlib import pyplot as plt
 
-from model import Deeplabv3
+from deeplab import Deeplabv3
 
 # Generates labels using most basic setup.  Supports various image sizes.  Returns image labels in same format
 # as original image.  Normalization matches MobileNetV2
@@ -75,7 +75,7 @@ plt.waitforbuttonpress()
 
 ### How to use this model with custom input shape and custom number of classes
 ```python
-from model import Deeplabv3
+from deeplab import Deeplabv3
 deeplab_model = Deeplabv3(input_shape=(384, 384, 3), classes=4)  
 #or you can use None as shape
 deeplab_model = Deeplabv3(input_shape=(None, None, 3), classes=4)
@@ -99,7 +99,7 @@ This model can be retrained [check this notebook](https://github.com/Golbstein/K
 In order to load model after using model.save() use this code:
 
 ```python
-from model import relu6
+from deeplab import relu6
 deeplab_model = load_model('example.h5')
 ```
 
